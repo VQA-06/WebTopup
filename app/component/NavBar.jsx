@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NavBar(data) {
   return (
-    <nav className="px-6 py-2 w-dvw flex justify-between bg-slate-900 text-sm z-50 sticky top-0">
+    <nav className="w-full flex justify-between bg-slate-900 text-sm z-50 sticky top-0 px-12 py-2 mb-5">
       <div className="flex gap-4 w-full">
         <div className="flex items-center gap-2">
           <FaGamepad size={50} />
