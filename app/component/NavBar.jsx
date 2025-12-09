@@ -2,7 +2,7 @@ import { FaGamepad, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
 import Link from "next/link";
 
-export default function NavBar(data) {
+export default function NavBar() {
   return (
     <nav className="w-full flex justify-between bg-slate-900 text-sm z-50 sticky top-0 px-12 py-2 mb-5">
       <div className="flex gap-4 w-full">

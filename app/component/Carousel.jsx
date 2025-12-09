@@ -6,6 +6,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import b1 from "@/public/a.jpg";
+import b2 from "@/public/b.jpg";
+import b3 from "@/public/c.jpeg";
+
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import Image from "next/image";
@@ -13,17 +17,17 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    src: "https://gaming-cdn.com/images/products/442/616x353/minecraft-java-and-bedrock-edition-java-and-bedrock-edition-pc-game-cover.jpg?v=1716387513",
+    src: b1,
     alt: "Pemandangan Alam",
   },
   {
     id: 2,
-    src: "https://w0.peakpx.com/wallpaper/615/267/HD-wallpaper-delta-force-2025-mobile-video-game-poster.jpg",
+    src: b2,
     alt: "Gunung",
   },
   {
     id: 3,
-    src: "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/honor_of_kings.png",
+    src: b3,
     alt: "Hutan",
   },
 ];
