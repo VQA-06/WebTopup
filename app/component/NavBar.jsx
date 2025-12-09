@@ -3,7 +3,7 @@ import { FaGamepad, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { MdAccountCircle } from "react-icons/md";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function NavBar() {
   const [active, setActive] = useState(false);
@@ -49,8 +49,8 @@ export default function NavBar() {
       </div>
 
       <div
-        className={`absolute left-0 flex md:hidden flex-col bg-slate-800 top-9 w-full text-sm gap-1 overflow-hidden ${
-          active ? "h-fit" : "h-0"
+        className={`absolute left-0 flex flex-col md:hidden bg-slate-800 top-9 w-full text-sm gap-1 overflow-hidden transition-all ease-out duration-300 ${
+          active ? "" : "h-0"
         }`}
       >
         <Link href={"/"} className="text-center mt-2 py-1">
