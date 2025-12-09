@@ -30,7 +30,7 @@ const slides = [
 
 export default function Carousel() {
   return (
-    <div className="w-full px-12">
+    <div className="w-full px-4 md:px-12">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -43,7 +43,7 @@ export default function Carousel() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-full h-[700px] rounded-3xl"
+        className="w-full h-55 md:h-[700px] rounded-3xl shadow-md md:shadow-lg shadow-gray-700"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
