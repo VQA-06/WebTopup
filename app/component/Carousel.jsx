@@ -6,10 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import b1 from "@/public/a.jpg";
-import b2 from "@/public/b.jpg";
-import b3 from "@/public/c.jpeg";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import Image from "next/image";
@@ -17,17 +13,17 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    src: b1,
+    src: "/images/a.jpg",
     alt: "Pemandangan Alam",
   },
   {
     id: 2,
-    src: b2,
+    src: "/images/b.jpg",
     alt: "Gunung",
   },
   {
     id: 3,
-    src: b3,
+    src: "/images/c.jpeg",
     alt: "Hutan",
   },
 ];
@@ -46,7 +42,7 @@ export default function Carousel() {
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="w-full h-[700px] rounded-3xl"
       >
         {slides.map((slide) => (
