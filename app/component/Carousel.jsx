@@ -43,7 +43,7 @@ export default function Carousel() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-full h-55 md:h-[300px] rounded-3xl shadow-md md:shadow-lg shadow-gray-700"
+        className="w-full h-55 md:h-[350px] rounded-3xl shadow-md md:shadow-lg shadow-gray-700"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
