@@ -21,13 +21,13 @@ export default function NavBar() {
         </div>
       </div>
 
-      <form action="" className="flex items-center w-full">
+      <form action="" className="flex items-center w-full gap-2">
         <input
           type="text"
           className="w-full bg-white text-black rounded-full py-0.5 px-1 md:p-1.5 text-[10px] md:text-xs focus:ring-0 focus:border-0"
         />
-        <button className="relative">
-          <FaSearch className="absolute right-[0.3] -top-2 p-1 md:-top-3 md:right-0.5 bg-amber-500 rounded-full hover:cursor-pointer w-4 h-4 md:w-[30px] md:h-[30px]" />
+        <button className="relative flex items-center">
+          <FaSearch className="p-1 md:p-2 md: md:-top-3 md:right-0.5 bg-amber-500 rounded-full hover:cursor-pointer w-5 h-5 md:w-[45px] md:h-[30px]" />
         </button>
       </form>
 
@@ -49,14 +49,14 @@ export default function NavBar() {
       </div>
 
       <div
-        className={`absolute left-0 flex flex-col md:hidden bg-slate-800 top-9 w-full text-sm gap-1 overflow-hidden transition-all ease-out duration-300 ${
+        className={`absolute left-0 flex flex-col md:hidden bg-slate-800 top-9 w-full text-sm overflow-hidden transition-all ease-out duration-300 ${
           active ? "" : "h-0"
         }`}
       >
-        <Link href={"/"} className="text-center mt-2 py-1">
+        <Link href={"/"} className="text-center py-2">
           Beranda
         </Link>
-        <Link href={"/games"} className="text-center bg-slate-700 py-1">
+        <Link href={"/games"} className="text-center bg-slate-700 py-2">
           Daftar Game
         </Link>
         <div className="flex justify-around m-4">

@@ -1,12 +1,12 @@
 import Carousel from "./component/Carousel";
-import GameList from "./component/GameList";
+import MainListLayout from "./component/MainListLayout";
 import NavBar from "./component/NavBar";
-export default function Home() {
+export default function Home({ searchParams }) {
   return (
     <div>
       <NavBar />
       <Carousel />
-      <GameList />
+      <MainListLayout searchParams={searchParams} />
     </div>
   );
 }

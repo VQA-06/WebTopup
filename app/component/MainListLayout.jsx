@@ -1,26 +1,37 @@
 import Image from "next/image";
 import pool from "../lib/Pool";
+import CategoryBtns from "./CategoryBtns";
 
-export default async function GameList() {
+export default async function MainListLayout({ searchParams }) {
   "use server";
-  const [categories] = await pool.query("select * from categories");
-  const [games] = await pool.query("select * from games");
+  const params = await searchParams;
+  const selectedCat = params?.catId;
+
+  let query = "select * from games limit 6";
+  let sId = [];
+
+  if (selectedCat && selectedCat != 1) {
+    query = "select * from games where category_id = ? limit 6";
+
+    sId.push(selectedCat);
+  }
+
+  let games = [];
+  let categories = [];
+
+  try {
+    const [gamesRows] = await pool.query(query, sId);
+    games = gamesRows;
+
+    const [catRows] = await pool.query("SELECT * FROM categories");
+    categories = catRows;
+  } catch (error) {
+    console.error("Database Error:", error);
+  }
 
   return (
     <div className="flex flex-col w-full py-3 md:py-6 px-4 md:px-12 gap-3 md:gap-6">
-      <div className="flex justify-center items-center gap-2 md:gap-4 text-black">
-        {categories.map((cat) => (
-          <form
-            action={""}
-            key={cat.id}
-            className="py-0.5 px-2 rounded-full ring-1 ring-gray-400 hover:bg-amber-500 hover:text-white hover:ring-amber-600 hover:cursor-pointer flex items-center shadow-lg"
-          >
-            <button className="hover:cursor-pointer text-xs md:text-lg lg:text-lg">
-              {cat.name}
-            </button>
-          </form>
-        ))}
-      </div>
+      <CategoryBtns categories={categories} />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {games.map((game) => (
           <div
@@ -31,7 +42,7 @@ export default async function GameList() {
                 url(${game.image_url})
               `,
             }}
-            className="flex flex-col bg-cover h-30 md:h-48 rounded-2xl p-2 justify-end gap-0.5 shadow-md shadow-gray-700"
+            className="flex flex-col bg-cover h-30 md:h-48 rounded-2xl p-2 justify-end gap-0.5 shadow-md shadow-gray-700 transition-all duration-300 ease-out hover:scale-105 hover:[&>form]:bg-amber-600 hover:[&>form]:text-white"
           >
             <h2 className="text-shadow-lg font-bold text-[11px] md:text-lg">
               {game.name}
