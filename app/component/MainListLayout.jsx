@@ -31,7 +31,7 @@ export default async function MainListLayout({ searchParams }) {
   }
 
   return (
-    <div className="flex flex-col w-full py-3 md:py-6 px-4 md:px-12 gap-3 md:gap-6">
+    <div className="flex flex-col w-full py-3 md:py-6 px-4 md:px-12 gap-3 md:gap-6 flex-1">
       <CategoryBtns categories={categories} />
       <GameCard games={games} />
     </div>
