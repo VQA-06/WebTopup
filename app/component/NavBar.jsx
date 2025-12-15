@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 
 export default function NavBar() {
   return (
-    <nav className="w-full flex justify-between bg-slate-900 text-xs md:text-sm z-50 sticky top-0 px-4 md:px-12 py-0.5 mb:py-2 mb-5">
+    <nav className="w-full flex justify-between bg-slate-900 text-xs md:text-sm z-50 sticky top-0 px-4 md:px-12 py-0.5 md:py-2 mb-5">
       <div className="flex gap-4 w-fit md:w-full pe-2">
         <Link className="flex items-center gap-2" href={"/"}>
           <FaGamepad className="w-8 h-8 md:w-[50px] md:h-[50px]" />

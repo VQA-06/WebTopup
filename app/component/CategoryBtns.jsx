@@ -15,6 +15,7 @@ export default function CategoryBtns({ categories }) {
     const params = new URLSearchParams(searchParams.toString());
 
     params.set("catId", id);
+    params.delete("page");
 
     router.push(`${path}?${params.toString()}`, { scroll: false });
   };

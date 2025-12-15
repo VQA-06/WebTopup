@@ -62,7 +62,7 @@ export default async function Browse({ searchParams }) {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="w-full py-3 md:py-6 px-4 md:px-12 gap-3 md:gap-6 flex-1 flex flex-col">
+      <div className="w-full pb-3 md:pb-6 px-4 md:px-12 gap-3 md:gap-6 flex-1 flex flex-col">
         <CategoryBtns categories={categories} selectedCategory={SC} />
         {gameData.length === 0 ? (
           <h1 className="text-center text-black font-semibold font-sans text-xl md:text-2xl">

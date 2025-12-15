@@ -8,7 +8,7 @@ export default function Footer() {
         <FaGamepad className="w-9 h-9 md:w-[60px] md:h-[60px]" />
         <h1 className="text-sm md:text-lg">TopUp</h1>
       </div>
-      <p>
+      <p className="text-xs md:text-sm">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente,
         odio.
       </p>
