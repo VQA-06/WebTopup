@@ -25,7 +25,7 @@ export default function MobileMenu() {
         <Link href={"/"} className="text-center py-2">
           Beranda
         </Link>
-        <Link href={"/games"} className="text-center bg-slate-700 py-2">
+        <Link href={"/browse"} className="text-center bg-slate-700 py-2">
           Daftar Game
         </Link>
         <div className="flex justify-around m-4">
